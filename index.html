@@ -72,14 +72,16 @@
 
     /* 縦組テキスト（A1） */
     .vertical {
-      writing-mode: vertical-rl;
-      text-orientation: upright;
-      font-size: 12pt;        /* 画面上の 12pt 指定 */
-      line-height: 1.7;
-      letter-spacing: 0.05em;
-      white-space: pre-wrap;
-    }
+  /* ← 縦組用の2行は消す or コメントアウト */
+  /* writing-mode: vertical-rl; */
+  /* text-orientation: upright; */
 
+  font-size: 18px;        /* 好きなサイズに調整してOK */
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  padding: 20px;
+  white-space: pre-wrap;  /* 改行をそのまま反映させたいならこのままでOK */
+}
     /* 画像ビュー（A2） */
     .image-wrap {
       display: flex;
@@ -89,8 +91,8 @@
       height: 100%;
     }
     .image-wrap img {
-      max-width: 100%;
-      max-height: 100%;
+      max-width: 45vw;
+      /*max-height: 100%;*/
       height: auto;
       /* 画像の中の文字サイズ感を
          実際のテキストと近づけたい時はここを調整 */
